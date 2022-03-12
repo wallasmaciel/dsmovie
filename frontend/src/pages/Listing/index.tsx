@@ -1,9 +1,10 @@
 import { Component, ReactNode } from 'react';
+import Pagination from '../../components/pagination';
 
 class Listing extends Component {
-    render() {
+    render(): ReactNode {
         return (
-            <h1>Página de listagem</h1>
+            <Pagination />
         );
     }
 };
