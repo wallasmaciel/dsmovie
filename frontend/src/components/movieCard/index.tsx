@@ -1,4 +1,5 @@
-import { Component, Fragment, ReactNode } from 'react';
+import { Component, ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import MovieScore from '../movieScore';
 import iMovie from '../../interfaces/iMovie';
 
@@ -18,7 +19,10 @@ class MovieCard extends Component {
                 <div className="dsmovie-card-bottom-container">
                     <h3>{ this.movie.title }</h3>
                     <MovieScore />
-                    <div className="btn btn-primary dsmovie-btn">Avaliar</div>
+
+                    <Link to={`/form/${this.movie.id}`}>
+                        <div className="btn btn-primary dsmovie-btn">Avaliar</div>
+                    </Link>
                 </div>
             </div>
         );
