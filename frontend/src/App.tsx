@@ -1,7 +1,14 @@
-function App() {
-  return (
-    <h1>Página principal</h1>
-  );
-}
+import { Component, ReactNode } from 'react';
+import Navbar from 'components/navbar';
+
+class App extends Component {
+  render(): ReactNode {
+      return( 
+        <div>
+          <Navbar /> 
+        </div>
+      );
+  }
+};
 
 export default App;
