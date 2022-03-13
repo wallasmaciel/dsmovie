@@ -1,6 +1,6 @@
 import { Component, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import iMovie from '../../interfaces/iMovie';
+import iMovie from 'interfaces/iMovie';
 import './styles.css';
 
 class Form extends Component {
