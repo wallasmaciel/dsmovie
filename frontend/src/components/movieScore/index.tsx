@@ -1,5 +1,5 @@
 import { Component, ReactNode } from 'react';
-import MovieStars from '../MovieStars';
+import MovieStars from 'components/movieStars';
 import './styles.css';
 
 class MovieScore extends Component {
