@@ -2,9 +2,20 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MovieCard from 'components/movieCard';
 import Pagination from 'components/pagination';
-import { BASE_URL } from 'utils/request';
-import iMoviePage from 'interfaces/iMoviePage';
+import { BASE_URL } from 'utils/request'; 
 import iMovie from 'interfaces/iMovie';
+
+interface iMoviePage {
+    content: iMovie[];
+    last: boolean;
+    totalPages: number;
+    totalElements: number;
+    size: number;
+    number: number;
+    first: boolean;
+    numberOfElements: number;
+    empty: boolean;
+}; 
 
 const Listing: React.FC = () => { 
     const [pageNumber, setPageNumber] = useState<number>(0);
