@@ -1,6 +1,6 @@
 import { Component, Fragment, ReactNode } from 'react';
-import MovieCard from '../../components/movieCard';
-import Pagination from '../../components/pagination';
+import MovieCard from '../../components/MovieCard';
+import Pagination from '../../components/Pagination';
 
 class Listing extends Component {
     render(): ReactNode {

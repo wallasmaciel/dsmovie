@@ -1,6 +1,6 @@
 import { Component, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import MovieScore from '../movieScore';
+import MovieScore from '../MovieScore';
 import iMovie from '../../interfaces/iMovie';
 
 class MovieCard extends Component {
