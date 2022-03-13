@@ -2,16 +2,21 @@ import { Component, ReactNode } from 'react';
 import MovieStars from 'components/movieStars';
 import './styles.css';
 
-class MovieScore extends Component {
-    private score: number = 3.5;
-    private count: number = 13;
+interface iProps {
+    score: number;
+    count: number;
+}
+
+class MovieScore extends Component<iProps> {
 
     render(): ReactNode {
+        console.log(this.props.score);
+
         return (
             <div className="dsmovie-score-container">
-                <p className="dsmovie-score-value">{ this.score > 0 ? this.score.toFixed(1) : '-' }</p>
-                <MovieStars />
-                <p className="dsmovie-score-count">{ this.count } avaliações</p>
+                <p className="dsmovie-score-value">{ this.props.score > 0 ? this.props.score.toFixed(1) : '-' }</p>
+                <MovieStars score={ this.props.score }/>
+                <p className="dsmovie-score-count">{ this.props.count } avaliações</p>
             </div>
         );
     }
