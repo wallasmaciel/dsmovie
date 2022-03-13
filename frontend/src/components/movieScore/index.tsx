@@ -9,9 +9,7 @@ interface iProps {
 
 class MovieScore extends Component<iProps> {
 
-    render(): ReactNode {
-        console.log(this.props.score);
-
+    render(): ReactNode { 
         return (
             <div className="dsmovie-score-container">
                 <p className="dsmovie-score-value">{ this.props.score > 0 ? this.props.score.toFixed(1) : '-' }</p>

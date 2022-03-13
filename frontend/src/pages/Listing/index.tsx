@@ -3,22 +3,10 @@ import axios from 'axios';
 import MovieCard from 'components/movieCard';
 import Pagination from 'components/pagination';
 import { BASE_URL } from 'utils/request'; 
-import iMovie from 'interfaces/iMovie';
-
-interface iMoviePage {
-    content: iMovie[];
-    last: boolean;
-    totalPages: number;
-    totalElements: number;
-    size: number;
-    number: number;
-    first: boolean;
-    numberOfElements: number;
-    empty: boolean;
-}; 
+import iMoviePage from 'interfaces/iMoviePage';
 
 const Listing: React.FC = () => { 
-    const [pageNumber] = useState<number>(0);
+    const [pageNumber, setPageNumber] = useState<number>(0);
     const [page, setPage] = useState<iMoviePage>({
         content: [],
         last: true,
@@ -39,9 +27,13 @@ const Listing: React.FC = () => {
             }); 
     }, [ pageNumber ]);
 
+    const handlePageChange = (newPageNumber: number) => {
+        setPageNumber(newPageNumber);
+    };
+
     return (
         <>
-            <Pagination />
+            <Pagination page={ page } onChange={ handlePageChange } />
 
             <div className="container">
                 <div className="row">
