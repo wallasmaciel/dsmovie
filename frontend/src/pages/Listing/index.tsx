@@ -18,7 +18,7 @@ interface iMoviePage {
 }; 
 
 const Listing: React.FC = () => { 
-    const [pageNumber, setPageNumber] = useState<number>(0);
+    const [pageNumber] = useState<number>(0);
     const [page, setPage] = useState<iMoviePage>({
         content: [],
         last: true,
@@ -38,14 +38,6 @@ const Listing: React.FC = () => {
                 setPage(data);
             }); 
     }, [ pageNumber ]);
-
-    const movie: iMovie = {
-        id: 1,
-        image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
-        title: "The Witcher",
-        count: 2,
-        score: 4.5
-    };
 
     return (
         <>

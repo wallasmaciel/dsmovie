@@ -1,4 +1,4 @@
-import React, { Component, ReactNode, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import iMovie from "interfaces/iMovie";
 import './styles.css';
